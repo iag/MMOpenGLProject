@@ -6,9 +6,14 @@
 //  Copyright (c) 2013 Glenn Maurits. All rights reserved.
 //
 
-
+// Cross-platform
+#ifdef __APPLE__
+#include <OpenGL/OpenGL.h>
 #include <GLUT/glut.h>
-#include <OpenGL/gl.h>
+#else
+#include <GL/glut.h> //GLUT bevat OpenGL en GLU
+#endif
+
 
 // ---- Prototypes ----
 void Render(void);
@@ -21,7 +26,7 @@ int main(int argc, char** argv)
 	glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(600,600);
 	glutInitWindowPosition(0,0);
-	glutCreateWindow("GlutApp");
+	glutCreateWindow("Project Multimedia 6");
 	glutDisplayFunc(Render);
 	Initialise();
 	glutMainLoop();
@@ -32,7 +37,7 @@ void Render(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
     
-    glColor3f(1.0f, 0.0f, 0.0f);
+    glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_POLYGON);
     glVertex2f(-0.5, -0.5);
     glVertex2f(-0.5, 0.5);
@@ -46,5 +51,5 @@ void Render(void)
 // ---- Initialise Function ----
 void Initialise()
 {
-	glClearColor (0.0, 0.0, 1.0, 0.0);
+	glClearColor (1.0, 0.0, 1.0, 0.0);
 }
