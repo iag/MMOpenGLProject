@@ -37,7 +37,7 @@ void display(void)
     
 }
 
-void reshape(int w, int h) //function called when window is resized
+void reshape(int w, int h) //function called when window is resized 
 {
     glViewport(0, 0, (GLsizei) w, (GLsizei) h);
     glMatrixMode(GL_PROJECTION);
