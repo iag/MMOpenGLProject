@@ -20,6 +20,10 @@
 #include <assert.h>
 
 using namespace std;
+
+static GLfloat xRot = 0.0f;
+static GLfloat yRot = 0.0f;
+
 void init(void)
 {
     glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -29,15 +33,91 @@ void init(void)
 
 void display(void)
 {
-    glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0, 1.0, 1.0);
+    //glClear(GL_COLOR_BUFFER_BIT);
+    //glColor3f(1.0, 1.0, 1.0);
     
-    glLoadIdentity(); //clear matrix
-    gluLookAt(0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0); //viewing information
-    glScalef(1.0, 2.0, 1.0);//modelling transformation
-    glutWireCube(1.0); //draw primitive
+    //glLoadIdentity(); //clear matrix
+    //gluLookAt(0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0); //viewing information
+    //glScalef(1.0, 2.0, 1.0);//modelling transformation
+    //glutWireCube(1.0); //draw primitive
     
-    glFlush();
+    //glFlush();
+    
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	
+	glMatrixMode(GL_MODELVIEW); //Switch to the drawing perspective
+	glLoadIdentity(); //Reset the drawing perspective
+    
+	glPushMatrix();
+
+	/* Camera position */
+	glTranslatef(0.0f, -0.25f, -4.0f); //Move forward 50 units
+    glRotatef(xRot, 1.0f, 0.0f, 0.0f);
+    glRotatef(yRot, 0.0f, 1.0f, 0.0f);
+	
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glBegin(GL_TRIANGLES);
+    // Bottom section - two triangles
+    glNormal3f(0.0f, -1.0f, 0.0f);
+    glTexCoord2f(1.0f, 1.0f);
+    glVertex3f(0.5f, 0.0f, -0.5f);
+    
+    glTexCoord2f(0.0f, 0.0f);
+    glVertex3f(-0.5f, 0.0f, 0.5f);
+    
+    glTexCoord2f(0.0f, 1.0f);
+    glVertex3f(-0.5f, 0.0f, -0.5f);
+    
+    
+    glTexCoord2f(1.0f, 1.0f);
+    glVertex3f(0.5f, 0.0f, -0.5f);
+    
+    glTexCoord2f(1.0f, 0.0f);
+    glVertex3f(0.5f, 0.0f, 0.5f);
+    
+    glTexCoord2f(0.0f, 0.0f);
+    glVertex3f(-0.5f, 0.0f, 0.5f);
+    
+    // Front Face
+    glNormal3f(0.0f, 0.535331905781585f, 0.856531049250535f);
+    glTexCoord2f(0.5f, 1.0f);
+    glVertex3f(0.0f, 0.8f, 0.0f);
+    glTexCoord2f(0.0f, 0.0f);
+    glVertex3f(-0.5f, 0.0f, 0.5f);
+    glTexCoord2f(1.0f, 0.0f);
+    glVertex3f(0.5f, 0.0f, 0.5f);
+    
+    // Left Face
+    glNormal3f(-0.856531049250535f, 0.535331905781585f, 0.0f);
+    glTexCoord2f(0.5f, 1.0f);
+    glVertex3f(0.0f, 0.8f, 0.0f);
+    glTexCoord2f(0.0f, 0.0f);
+    glVertex3f(-0.5f, 0.0f, -0.5f);
+    glTexCoord2f(1.0f, 0.0f);
+    glVertex3f(-0.5f, 0.0f, 0.5f);
+    
+    // Back Face
+    glNormal3f(0.0f, 0.535331905781585f, -0.856531049250535f);
+    glTexCoord2f(0.5f, 1.0f);
+    glVertex3f(0.0f, 0.8f, 0.0f);
+    glTexCoord2f(0.0f, 0.0f);
+    glVertex3f(0.5f, 0.0f, -0.5f);
+    glTexCoord2f(1.0f, 0.0f);
+    glVertex3f(-0.5f, 0.0f, -0.5f);
+    
+    // Right Face
+    glNormal3f(0.856531049250535f, 0.535331905781585f, 0.0f);
+    glTexCoord2f(0.5f, 1.0f);
+    glVertex3f(0.0f, 0.8f, 0.0f);
+    glTexCoord2f(0.0f, 0.0f);
+    glVertex3f(0.5f, 0.0f, 0.5f);
+    glTexCoord2f(1.0f, 0.0f);
+    glVertex3f(0.5f, 0.0f, -0.5f);
+	glEnd();
+	
+	glPopMatrix();
+	
+	glutSwapBuffers();
     
 }
 
@@ -56,8 +136,16 @@ void keyboard(unsigned char key, int x, int y)//function called when key is pres
     switch (key) {
         case 27:
             exit(0);
+        case GLUT_KEY_LEFT:
+            //key d
+            yRot += 5.0f;
+            break;
+        case GLUT_KEY_RIGHT:
+            //key f
+            yRot -= 5.0f;
             break;
     }
+    glutPostRedisplay();
 }
 
 Image::Image(char* ps, int w, int h) : pixels(ps), width(w), height(h) {
@@ -255,19 +343,40 @@ GLuint _textureId; //The id of the texture
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv); //initialize glut
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);//single buffer, color system (could also be RGBA)
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);//single buffer, color system (could also be RGBA)
     
     glutInitWindowSize(500, 500);//set window size
     glutInitWindowPosition(100, 100);//set window pos
     
     glutCreateWindow(argv[0]);//create window!
-    init();
+   // init();
+    glEnable(GL_DEPTH_TEST); //Initializes 3D rendering (makes 3D drawing work when something is in front of something else)
+    glFrontFace(GL_CCW);		// Counter clock-wise polygons face out
+    glEnable(GL_CULL_FACE);		// Do not calculate inside of jet
+    
+    // Enable lighting
+    glEnable(GL_LIGHTING);
+	
+    // Light values and coordinates
+    GLfloat whiteLight[] = { 0.05f, 0.05f, 0.05f, 1.0f };
+    GLfloat sourceLight[] = { 0.25f, 0.25f, 0.25f, 1.0f };
+    GLfloat lightPos[] = { -10.f, 5.0f, 5.0f, 1.0f };
+    // Setup and enable light 0
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT,whiteLight);
+    glLightfv(GL_LIGHT0,GL_AMBIENT,sourceLight);
+    glLightfv(GL_LIGHT0,GL_DIFFUSE,sourceLight);
+    glLightfv(GL_LIGHT0,GL_POSITION,lightPos);
+    glEnable(GL_LIGHT0);
+	
+    // Enable color tracking
+    glEnable(GL_COLOR_MATERIAL);
     
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
     
-    Image* testImg = loadBMP("Test.bmp");
+    
+    Image* testImg = loadBMP("/Users/maricauxglenn/Documents/Coding/MultimediaOpenGLProject/MultimediaOpenGLProject/artesis_logo.bmp");
     _textureId = loadTexture(testImg);
     delete testImg;
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
