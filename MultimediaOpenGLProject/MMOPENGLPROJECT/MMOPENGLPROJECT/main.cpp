@@ -37,6 +37,7 @@ bool active=true;
 bool fullscreen=true;
 GLfloat mouse_x;
 GLfloat mouse_y;
+float sphereRadius= 1.0f;
 void init(void)
 {
     glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -71,7 +72,7 @@ void display(void)
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_TRIANGLES);
     // Bottom section - two triangles
-    glNormal3f(0.0f, -1.0f, 0.0f);
+   /* glNormal3f(0.0f, -1.0f, 0.0f);
     glTexCoord2f(1.0f, 1.0f);
     glVertex3f(0.5f, 0.0f, -0.5f);
     
@@ -126,6 +127,22 @@ void display(void)
     glVertex3f(0.5f, 0.0f, 0.5f);
     glTexCoord2f(1.0f, 0.0f);
     glVertex3f(0.5f, 0.0f, -0.5f);
+
+	*/
+	static GLUquadricObj * sphere=gluNewQuadric();
+	glEnable(GL_LIGHTING);
+	/*glMaterialfv(GL_FRONT, GL_AMBIENT, COLOR(1.0f, 0.0f, 0.0f, 0.0f));
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, COLOR(1.0f, 0.0f, 0.0f, 0.0f));
+	glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+	glMaterialf(GL_FRONT, GL_SHININESS, 32.0f);*/
+	glEnable(GL_CULL_FACE);
+
+	gluSphere(sphere, sphereRadius, 48, 24);
+			
+	glDisable(GL_LIGHTING);
+	glDisable(GL_CULL_FACE);
+	//glMaterialfv(GL_FRONT, GL_SPECULAR, black);
+
 	glEnd();
 	
 	glPopMatrix();
@@ -165,13 +182,13 @@ void keyboard(unsigned char key, int x, int y)//function called when key is pres
 			//key s
 			z+=0.1f;
 			break;
-		case GLUT_LEFT_BUTTON:
+	/*	case GLUT_LEFT_BUTTON:
 			if(GLUT_UP)
 				//no mousecontrol
 
 			else if (GLUT_DOWN)
 			//mousecontrtol
-
+		break;*/
     }
     glutPostRedisplay();
 }
