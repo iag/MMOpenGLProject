@@ -28,7 +28,16 @@ using namespace std;
 
 static GLfloat xRot = 0.0f;
 static GLfloat yRot = 0.0f;
-
+GLfloat xspeed;
+GLfloat yspeed;
+GLfloat z=-3.0f;
+float deltaAngle = 0.0f;
+int xOrigin = -1;
+bool active=true;
+bool fullscreen=true;
+GLfloat mouse_x;
+GLfloat mouse_y;
+float sphereRadius= 1.0f;
 void init(void)
 {
     glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -56,14 +65,14 @@ void display(void)
 	glPushMatrix();
 
 	/* Camera position */
-	glTranslatef(0.0f, -0.25f, -4.0f); //Move forward 50 units
+	glTranslatef(0.0f, -0.25f, z); //Move forward 50 units
     glRotatef(xRot, 1.0f, 0.0f, 0.0f);
     glRotatef(yRot, 0.0f, 1.0f, 0.0f);
 	
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_TRIANGLES);
     // Bottom section - two triangles
-    glNormal3f(0.0f, -1.0f, 0.0f);
+   /* glNormal3f(0.0f, -1.0f, 0.0f);
     glTexCoord2f(1.0f, 1.0f);
     glVertex3f(0.5f, 0.0f, -0.5f);
     
@@ -118,12 +127,28 @@ void display(void)
     glVertex3f(0.5f, 0.0f, 0.5f);
     glTexCoord2f(1.0f, 0.0f);
     glVertex3f(0.5f, 0.0f, -0.5f);
+
+	*/
+	static GLUquadricObj * sphere=gluNewQuadric();
+	glEnable(GL_LIGHTING);
+	/*glMaterialfv(GL_FRONT, GL_AMBIENT, COLOR(1.0f, 0.0f, 0.0f, 0.0f));
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, COLOR(1.0f, 0.0f, 0.0f, 0.0f));
+	glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+	glMaterialf(GL_FRONT, GL_SHININESS, 32.0f);*/
+	glEnable(GL_CULL_FACE);
+
+	gluSphere(sphere, sphereRadius, 48, 24);
+			
+	glDisable(GL_LIGHTING);
+	glDisable(GL_CULL_FACE);
+	//glMaterialfv(GL_FRONT, GL_SPECULAR, black);
+
 	glEnd();
 	
 	glPopMatrix();
 	
 	glutSwapBuffers();
-    
+
 }
 
 void reshape(int w, int h) //function called when window is resized
@@ -149,6 +174,21 @@ void keyboard(unsigned char key, int x, int y)//function called when key is pres
             //key f
             yRot -= 5.0f;
             break;
+		case 119:
+			//key r
+			z-=0.1f;
+			break;
+		case 115:
+			//key s
+			z+=0.1f;
+			break;
+	/*	case GLUT_LEFT_BUTTON:
+			if(GLUT_UP)
+				//no mousecontrol
+
+			else if (GLUT_DOWN)
+			//mousecontrtol
+		break;*/
     }
     glutPostRedisplay();
 }
