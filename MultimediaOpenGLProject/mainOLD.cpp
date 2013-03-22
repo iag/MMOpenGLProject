@@ -7,6 +7,7 @@
 //
 
 // Cross-platform
+/*
 #ifdef __APPLE__
 #include <OpenGL/OpenGL.h>
 #include <GLUT/glut.h>
@@ -50,7 +51,7 @@ void display(void)
     
 	glPushMatrix();
 
-	/* Camera position */
+	/* Camera position *//*
 	glTranslatef(0.0f, -0.25f, -4.0f); //Move forward 50 units
     glRotatef(xRot, 1.0f, 0.0f, 0.0f);
     glRotatef(yRot, 0.0f, 1.0f, 0.0f);
@@ -389,4 +390,4 @@ int main(int argc, char** argv)
     glutMainLoop();
     return 0;
     
-}
+}*/
