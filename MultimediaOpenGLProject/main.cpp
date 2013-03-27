@@ -29,6 +29,7 @@ using namespace std;
 
 static GLfloat xRot = 0.0f;
 static GLfloat yRot = 0.0f;
+GLfloat z=-3.0f;
 
 /* Some physics constants */
 #define DAMPING 0.01 // how much to damp the cloth simulation each frame
@@ -492,7 +493,6 @@ void display(void)
 	cloth1.ballCollision(ball_pos,ball_radius); // resolve collision with the ball
     
     
-    
 	// drawing
     
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -509,8 +509,12 @@ void display(void)
 	glEnd();
 	glEnable(GL_LIGHTING);
     
-	glTranslatef(-6.5,6,-9.0f); // move camera out and center on the cloth
-	glRotatef(25,0,1,0); // rotate a bit to see the cloth from the side
+    glTranslatef(0.0f, 0.25f, z);
+    glRotatef(xRot, 1.0f, 0.0f, 0.0f);
+    glRotatef(yRot, 0.0f, 1.0f, 0.0f);
+    
+	//glTranslatef(-6.5,6,-9.0f); // move camera out and center on the cloth
+	//glRotatef(25,0,1,0); // rotate a bit to see the cloth from the side
 	cloth1.drawShaded(myImage); // finally draw the cloth with smooth shading
 	
 	glPushMatrix(); // to draw the ball we use glutSolidSphere, and need to draw the sphere at the position of the ball
@@ -536,15 +540,38 @@ void reshape(int w, int h)
 	glLoadIdentity();
 }
 
-void keyboard( unsigned char key, int x, int y )
+void keyboard(unsigned char key, int x, int y)//function called when key is pressed
 {
-	switch ( key ) {
+    //exit program when exit is pressed (key 27)
+    switch (key) {
         case 27:
-            exit ( 0 );
+            exit(0);
+        case GLUT_KEY_LEFT:
+            //key d
+            yRot += 5.0f;
             break;
-        default:
+        case GLUT_KEY_RIGHT:
+            //key f
+            yRot -= 5.0f;
             break;
-	}
+		case 119:
+			//key r
+			z-=0.1f;
+			break;
+		case 115:
+			//key s
+			z+=0.1f;
+			break;
+            /*	case GLUT_LEFT_BUTTON:
+             if(GLUT_UP)
+             //no mousecontrol
+             
+             else if (GLUT_DOWN)
+             //mousecontrtol
+             break;*/
+    }
+    glutPostRedisplay();
+    
 }
 
 void arrow_keys( int a_keys, int x, int y )
