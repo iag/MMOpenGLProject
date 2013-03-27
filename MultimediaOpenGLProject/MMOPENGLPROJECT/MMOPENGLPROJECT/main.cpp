@@ -37,6 +37,7 @@ bool active=true;
 bool fullscreen=true;
 GLfloat mouse_x;
 GLfloat mouse_y;
+float scaler = 2.0f;
 float sphereRadius= 1.0f;
 void init(void)
 {
@@ -142,12 +143,18 @@ void display(void)
 	glDisable(GL_LIGHTING);
 	glDisable(GL_CULL_FACE);
 	//glMaterialfv(GL_FRONT, GL_SPECULAR, black);
-
+	
 	glEnd();
+	
+		
+		
+	
 	
 	glPopMatrix();
 	
 	glutSwapBuffers();
+
+	
 
 }
 
@@ -383,6 +390,24 @@ GLuint loadTexture(Image* image)
 	return textureId; //Returns the id of the texture
 }
 
+
+void sphereSizer(){
+	if(sphereRadius < 1.5)
+	{
+		sphereRadius = sphereRadius +0.01;
+	}
+	else
+	{
+		while(sphereRadius >  0.5){
+		sphereRadius = sphereRadius -0.01;
+		}
+	}
+
+}
+
+
+
+
 GLuint _textureId; //The id of the texture
 
 int main(int argc, char** argv)
@@ -392,7 +417,7 @@ int main(int argc, char** argv)
     
     glutInitWindowSize(500, 500);//set window size
     glutInitWindowPosition(100, 100);//set window pos
-    
+    glScalef(scaler,scaler,scaler);
     glutCreateWindow(argv[0]);//create window!
    // init();
     glEnable(GL_DEPTH_TEST); //Initializes 3D rendering (makes 3D drawing work when something is in front of something else)
