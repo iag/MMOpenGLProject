@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="multimediaopenglproject\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\mainOLD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\bitmap font\BITMAP_FONT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\fps counter\FPS_COUNTER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\gl files\ARB_program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\gl files\GLee.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_CalculateStride.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_ExpandPalette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_Load.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_Load24BitBMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_Load8BitBMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadAlpha.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadBMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadCompressedTrueColorTGA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadTGA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadUncompressed8BitTGA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadUncompressedTrueColorTGA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\log\LOG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\maths\COLOR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\maths\MATRIX4X4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\maths\PLANE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\maths\VECTOR2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\maths\VECTOR3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\maths\VECTOR4D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\mmopenglproject\mmopenglproject\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\mmopenglproject\mmopenglproject\MMOPENGLPROJECT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\mmopenglproject\mmopenglproject\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\timer\TIMER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_CheckGLError.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_FindSamplesSupported.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_HandleMessages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_Init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_InitDummy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_InitExtended.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_InitStandard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_MakeCurrent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_SaveScreenshot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_SelectModeProc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_Shutdown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_ShutdownDummy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_UpdateInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_extensions_string_extension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_multisample_extension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_pixel_format_extension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimediaopenglproject\window\wgl extensions\WGL_EXT_swap_control_extension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="multimediaopenglproject\BALL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\imageloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\SPRING.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\bitmap font\BITMAP_FONT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\fps counter\FPS_COUNTER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\gl files\ARB_program.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\gl files\GLee.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\image\IMAGE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\log\LOG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\maths\COLOR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\maths\Maths.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\maths\MATRIX4X4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\maths\PLANE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\maths\VECTOR2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\maths\VECTOR3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\maths\VECTOR4D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\mmopenglproject\mmopenglproject\imageloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\mmopenglproject\mmopenglproject\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\mmopenglproject\mmopenglproject\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\resources\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\timer\TIMER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\window\WINDOW.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_extensions_string_extension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_multisample_extension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_pixel_format_extension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimediaopenglproject\window\wgl extensions\WGL_EXT_swap_control_extension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="multimediaopenglproject\resources\Resolution.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,107 @@
+﻿  BITMAP_FONT.cpp
+BITMAP_FONT.cpp(102): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : see declaration of 'vsprintf'
+  WINDOW_UpdateInput.cpp
+  WINDOW_ShutdownDummy.cpp
+  WINDOW_Shutdown.cpp
+  WINDOW_SelectModeProc.cpp
+..\window\WINDOW_SelectModeProc.cpp(14): fatal error C1083: Cannot open include file: 'GL/glext.h': No such file or directory
+  WINDOW_SaveScreenshot.cpp
+..\window\WINDOW_SaveScreenshot.cpp(27): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : see declaration of 'sprintf'
+..\window\WINDOW_SaveScreenshot.cpp(30): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+..\window\WINDOW_SaveScreenshot.cpp(75): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  WINDOW_MakeCurrent.cpp
+  WINDOW_InitStandard.cpp
+  WINDOW_InitExtended.cpp
+..\window\WINDOW_InitExtended.cpp(17): fatal error C1083: Cannot open include file: 'GL/glext.h': No such file or directory
+  WINDOW_InitDummy.cpp
+  WINDOW_Init.cpp
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_extensions_string_extension.h(18): error C2146: syntax error : missing ';' before identifier 'wglGetExtensionsStringARB'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_extensions_string_extension.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(18): error C2146: syntax error : missing ';' before identifier 'wglGetPixelFormatAttribivARB'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(19): error C2146: syntax error : missing ';' before identifier 'wglGetPixelFormatAttribfvARB'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(20): error C2146: syntax error : missing ';' before identifier 'wglChoosePixelFormatARB'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_EXT_swap_control_extension.h(18): error C2146: syntax error : missing ';' before identifier 'wglSwapIntervalEXT'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_EXT_swap_control_extension.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_EXT_swap_control_extension.h(19): error C2146: syntax error : missing ';' before identifier 'wglGetSwapIntervalEXT'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_EXT_swap_control_extension.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+..\window\WINDOW_Init.cpp(59): error C2064: term does not evaluate to a function taking 1 arguments
+  WINDOW_HandleMessages.cpp
+  WINDOW_FindSamplesSupported.cpp
+..\window\WINDOW_FindSamplesSupported.cpp(14): fatal error C1083: Cannot open include file: 'GL/glext.h': No such file or directory
+  WINDOW_CheckGLError.cpp
+  WGL_EXT_swap_control_extension.cpp
+..\window\wgl extensions\WGL_EXT_swap_control_extension.cpp(13): fatal error C1083: Cannot open include file: 'GL\glext.h': No such file or directory
+  WGL_ARB_pixel_format_extension.cpp
+..\window\wgl extensions\WGL_ARB_pixel_format_extension.cpp(13): fatal error C1083: Cannot open include file: 'GL\glext.h': No such file or directory
+  WGL_ARB_multisample_extension.cpp
+..\window\wgl extensions\WGL_ARB_multisample_extension.cpp(13): fatal error C1083: Cannot open include file: 'GL\glext.h': No such file or directory
+  WGL_ARB_extensions_string_extension.cpp
+..\window\wgl extensions\WGL_ARB_extensions_string_extension.cpp(13): fatal error C1083: Cannot open include file: 'GL\glext.h': No such file or directory
+  TIMER.cpp
+  stdafx.cpp
+  Generating Code...
+  Compiling...
+  MMOPENGLPROJECT.cpp
+  main.cpp
+  VECTOR4D.cpp
+  VECTOR3D.cpp
+  VECTOR2D.cpp
+  PLANE.cpp
+  MATRIX4X4.cpp
+  COLOR.cpp
+  mainOLD.cpp
+  main.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(360): error C2381: 'exit' : redefinition; __declspec(noreturn) differs
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\GL/glut.h(146) : see declaration of 'exit'
+..\main.cpp(543): error C2264: 'exit' : error in function definition or declaration; function not called
+  LOG.cpp
+..\log\LOG.cpp(27): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : see declaration of 'strcpy'
+..\log\LOG.cpp(30): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+..\log\LOG.cpp(45): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+..\log\LOG.cpp(65): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+..\log\LOG.cpp(88): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+..\log\LOG.cpp(111): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  IMAGE_LoadUncompressedTrueColorTGA.cpp
+..\image\IMAGE_LoadUncompressedTrueColorTGA.cpp(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  IMAGE_LoadUncompressed8BitTGA.cpp
+..\image\IMAGE_LoadUncompressed8BitTGA.cpp(27): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  IMAGE_LoadTGA.cpp
+..\image\IMAGE_LoadTGA.cpp(30): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  IMAGE_LoadCompressedTrueColorTGA.cpp
+..\image\IMAGE_LoadCompressedTrueColorTGA.cpp(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  IMAGE_LoadBMP.cpp
+..\image\IMAGE_LoadBMP.cpp(25): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  IMAGE_LoadAlpha.cpp
+  IMAGE_Load8BitBMP.cpp
+..\image\IMAGE_Load8BitBMP.cpp(27): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  IMAGE_Load24BitBMP.cpp
+..\image\IMAGE_Load24BitBMP.cpp(27): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+  IMAGE_Load.cpp
+  Generating Code...
+  Compiling...
+  IMAGE_ExpandPalette.cpp
+  IMAGE_CalculateStride.cpp
+  ARB_program.cpp
+..\gl files\ARB_program.cpp(30): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'int', possible loss of data
+  FPS_COUNTER.cpp
+  Generating Code...

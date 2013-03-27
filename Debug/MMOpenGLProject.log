@@ -1,0 +1,29 @@
+﻿  WGL_EXT_swap_control_extension.cpp
+multimediaopenglproject\window\wgl extensions\WGL_EXT_swap_control_extension.cpp(13): fatal error C1083: Cannot open include file: 'GL\glext.h': No such file or directory
+  WGL_ARB_pixel_format_extension.cpp
+multimediaopenglproject\window\wgl extensions\WGL_ARB_pixel_format_extension.cpp(13): fatal error C1083: Cannot open include file: 'GL\glext.h': No such file or directory
+  WGL_ARB_multisample_extension.cpp
+multimediaopenglproject\window\wgl extensions\WGL_ARB_multisample_extension.cpp(13): fatal error C1083: Cannot open include file: 'GL\glext.h': No such file or directory
+  WGL_ARB_extensions_string_extension.cpp
+multimediaopenglproject\window\wgl extensions\WGL_ARB_extensions_string_extension.cpp(13): fatal error C1083: Cannot open include file: 'GL\glext.h': No such file or directory
+  WINDOW_SelectModeProc.cpp
+multimediaopenglproject\window\WINDOW_SelectModeProc.cpp(14): fatal error C1083: Cannot open include file: 'GL/glext.h': No such file or directory
+  WINDOW_InitExtended.cpp
+multimediaopenglproject\window\WINDOW_InitExtended.cpp(17): fatal error C1083: Cannot open include file: 'GL/glext.h': No such file or directory
+  WINDOW_Init.cpp
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_extensions_string_extension.h(18): error C2146: syntax error : missing ';' before identifier 'wglGetExtensionsStringARB'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_extensions_string_extension.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(18): error C2146: syntax error : missing ';' before identifier 'wglGetPixelFormatAttribivARB'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(19): error C2146: syntax error : missing ';' before identifier 'wglGetPixelFormatAttribfvARB'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(20): error C2146: syntax error : missing ';' before identifier 'wglChoosePixelFormatARB'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_ARB_pixel_format_extension.h(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_EXT_swap_control_extension.h(18): error C2146: syntax error : missing ';' before identifier 'wglSwapIntervalEXT'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_EXT_swap_control_extension.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_EXT_swap_control_extension.h(19): error C2146: syntax error : missing ';' before identifier 'wglGetSwapIntervalEXT'
+c:\users\maurits\programming\mmopenglproject\multimediaopenglproject\window\WGL extensions/WGL_EXT_swap_control_extension.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+multimediaopenglproject\window\WINDOW_Init.cpp(59): error C2064: term does not evaluate to a function taking 1 arguments
+  WINDOW_FindSamplesSupported.cpp
+multimediaopenglproject\window\WINDOW_FindSamplesSupported.cpp(14): fatal error C1083: Cannot open include file: 'GL/glext.h': No such file or directory
+  Generating Code...

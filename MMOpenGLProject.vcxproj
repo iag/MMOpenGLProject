@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{03D236F8-31B6-44E4-82E4-0540114758D5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="multimediaopenglproject\bitmap font\BITMAP_FONT.cpp" />
+    <ClCompile Include="multimediaopenglproject\fps counter\FPS_COUNTER.cpp" />
+    <ClCompile Include="multimediaopenglproject\gl files\ARB_program.cpp" />
+    <ClCompile Include="multimediaopenglproject\gl files\GLee.c" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_CalculateStride.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_ExpandPalette.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_Load.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_Load24BitBMP.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_Load8BitBMP.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadAlpha.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadBMP.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadCompressedTrueColorTGA.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadTGA.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadUncompressed8BitTGA.cpp" />
+    <ClCompile Include="multimediaopenglproject\image\IMAGE_LoadUncompressedTrueColorTGA.cpp" />
+    <ClCompile Include="multimediaopenglproject\log\LOG.cpp" />
+    <ClCompile Include="multimediaopenglproject\main.cpp" />
+    <ClCompile Include="multimediaopenglproject\mainOLD.cpp" />
+    <ClCompile Include="multimediaopenglproject\maths\COLOR.cpp" />
+    <ClCompile Include="multimediaopenglproject\maths\MATRIX4X4.cpp" />
+    <ClCompile Include="multimediaopenglproject\maths\PLANE.cpp" />
+    <ClCompile Include="multimediaopenglproject\maths\VECTOR2D.cpp" />
+    <ClCompile Include="multimediaopenglproject\maths\VECTOR3D.cpp" />
+    <ClCompile Include="multimediaopenglproject\maths\VECTOR4D.cpp" />
+    <ClCompile Include="multimediaopenglproject\mmopenglproject\mmopenglproject\main.cpp" />
+    <ClCompile Include="multimediaopenglproject\mmopenglproject\mmopenglproject\MMOPENGLPROJECT.cpp" />
+    <ClCompile Include="multimediaopenglproject\mmopenglproject\mmopenglproject\stdafx.cpp" />
+    <ClCompile Include="multimediaopenglproject\timer\TIMER.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_extensions_string_extension.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_multisample_extension.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_pixel_format_extension.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\wgl extensions\WGL_EXT_swap_control_extension.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_CheckGLError.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_FindSamplesSupported.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_HandleMessages.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_Init.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_InitDummy.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_InitExtended.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_InitStandard.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_MakeCurrent.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_SaveScreenshot.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_SelectModeProc.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_Shutdown.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_ShutdownDummy.cpp" />
+    <ClCompile Include="multimediaopenglproject\window\WINDOW_UpdateInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="multimediaopenglproject\BALL.h" />
+    <ClInclude Include="multimediaopenglproject\bitmap font\BITMAP_FONT.h" />
+    <ClInclude Include="multimediaopenglproject\fps counter\FPS_COUNTER.h" />
+    <ClInclude Include="multimediaopenglproject\gl files\ARB_program.h" />
+    <ClInclude Include="multimediaopenglproject\gl files\GLee.h" />
+    <ClInclude Include="multimediaopenglproject\imageloader.h" />
+    <ClInclude Include="multimediaopenglproject\image\IMAGE.h" />
+    <ClInclude Include="multimediaopenglproject\log\LOG.h" />
+    <ClInclude Include="multimediaopenglproject\Main.h" />
+    <ClInclude Include="multimediaopenglproject\maths\COLOR.h" />
+    <ClInclude Include="multimediaopenglproject\maths\Maths.h" />
+    <ClInclude Include="multimediaopenglproject\maths\MATRIX4X4.h" />
+    <ClInclude Include="multimediaopenglproject\maths\PLANE.h" />
+    <ClInclude Include="multimediaopenglproject\maths\VECTOR2D.h" />
+    <ClInclude Include="multimediaopenglproject\maths\VECTOR3D.h" />
+    <ClInclude Include="multimediaopenglproject\maths\VECTOR4D.h" />
+    <ClInclude Include="multimediaopenglproject\mmopenglproject\mmopenglproject\imageloader.h" />
+    <ClInclude Include="multimediaopenglproject\mmopenglproject\mmopenglproject\stdafx.h" />
+    <ClInclude Include="multimediaopenglproject\mmopenglproject\mmopenglproject\targetver.h" />
+    <ClInclude Include="multimediaopenglproject\resources\resource.h" />
+    <ClInclude Include="multimediaopenglproject\SPRING.h" />
+    <ClInclude Include="multimediaopenglproject\timer\TIMER.h" />
+    <ClInclude Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_extensions_string_extension.h" />
+    <ClInclude Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_multisample_extension.h" />
+    <ClInclude Include="multimediaopenglproject\window\wgl extensions\WGL_ARB_pixel_format_extension.h" />
+    <ClInclude Include="multimediaopenglproject\window\wgl extensions\WGL_EXT_swap_control_extension.h" />
+    <ClInclude Include="multimediaopenglproject\window\WINDOW.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="multimediaopenglproject\resources\Resolution.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
